@@ -1,0 +1,103 @@
+.meals {
+  max-width: 60rem;
+  width: 80%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meal-error{
+  text-align: center;
+  color: red;
+}
+.first-ball,
+.second-ball,
+.third-ball {
+  top: -10px;
+  left: -150px;
+  position: absolute;
+  background: #cae01c;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation:horizontal 2s infinite, color 3s infinite;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-delay: 0s, 0.25s
+
+}
+.second-ball {
+  animation-delay: 0.2s, 0.45s;
+  opacity: 0.7;
+
+}
+.third-ball {
+  animation-delay: 0.4s, 0.65s;
+  opacity: 0.5;
+
+}
+
+
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes horizontal {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: -100px;
+  }
+  
+}
+/* @keyframes vertical {
+  0% {
+    top: -50px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+@keyframes color {
+  50% {
+    background: #de804a;
+  }
+}
+
+.loading-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* animation: fadeIn 2s 1; */
+  animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+}
+
+
